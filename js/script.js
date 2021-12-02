@@ -116,11 +116,15 @@ buttons.addEventListener("click", function() {
             
             console.log(numbers);
             console.log(whiteList);
-            console.log(whiteList.includes(numbers));
+            
             square100.addEventListener("click", function () {
-                for (let i = 0; i < numbers.length; i++) {
-                    if (numbers[i] == whiteList) {
-                        alert("ciao");
+                for (let x = 0; x < whiteList.length; x++) {
+                    if (numbers[x] == i) {
+                        square100.classList.add("lose")
+                    alert("hai perso");
+                    containerGrid.innerHTML = `<div class="title-grid"><h1>Hai perso! Premi play e riprova</h1> </div>`;
+                    } else {
+                        square100.classList.add("color")
                     }
                 }
                 
