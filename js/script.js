@@ -81,11 +81,8 @@ console.log(number100);
 // const button = document.querySelector(".button-play");
 let numbers = [];
 let whiteList = [];
-let punteggio =[];
 let punti = 0;
-for (let i = 0; i < punteggio.length; i++) {
-    punti += punteggio[i];
-}
+
 
 
 let punto = 1;
@@ -133,11 +130,11 @@ buttons.addEventListener("click", function() {
                     il tuo punteggio è di ${punti}</div>`;
                     } else {
                         square100.classList.add("color")
-                        punteggio.push(parseInt(punto));
-                        console.log(punti);
                     }
                 }
                 
+                punti += 1;
+                console.log(punti);
             })
         } 
         
