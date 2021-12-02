@@ -145,6 +145,29 @@ buttons.addEventListener("click", function() {
             square81.classList.add("square-81");
             containerGrid.append(square81);
             square81.append(i);
+            whiteList.push(i);
+                   while (numbers.length < 16) {
+                    const number = Math.floor(Math.random() * number100) + 1; 
+                    console.log('numero generato', number);
+                    if (numbers.includes(number) == false) { 
+                      numbers.push(number);
+                    }
+                    // console.log(numbers.length);
+                  }
+            square81.addEventListener("click", function () {
+                for (let x = 0; x < whiteList.length; x++) {
+                    if (numbers[x] == i) {
+                        square81.classList.add("lose")
+                    alert("hai perso");
+                    containerGrid.innerHTML = `<div class="title-grid"><h1>Hai perso! Premi play e riprova</h1> 
+                    il tuo punteggio è di ${punti}</div>`;
+                    } else {
+                        square81.classList.add("color")
+                    }
+                }
+                punti += 1;
+                console.log(punti);
+            })
         } 
     } else  {
         for (let i = 1; i < number49 +1; i++) {
@@ -152,7 +175,30 @@ buttons.addEventListener("click", function() {
             const square49 = document.createElement("div");
             square49.classList.add("square-49");
             containerGrid.append(square49);
-            square49.append(i); 
+            square49.append(i);
+            whiteList.push(i);
+                   while (numbers.length < 16) {
+                    const number = Math.floor(Math.random() * number100) + 1; 
+                    console.log('numero generato', number);
+                    if (numbers.includes(number) == false) { 
+                      numbers.push(number);
+                    }
+                    // console.log(numbers.length);
+                  }
+            square49.addEventListener("click", function () {
+                for (let x = 0; x < whiteList.length; x++) {
+                    if (numbers[x] == i) {
+                        square49.classList.add("lose")
+                    alert("hai perso");
+                    containerGrid.innerHTML = `<div class="title-grid"><h1>Hai perso! Premi play e riprova</h1> 
+                    il tuo punteggio è di ${punti}</div>`;
+                    } else {
+                        square49.classList.add("color")
+                    }
+                }
+                punti += 1;
+                console.log(punti);
+            })
         }
     }
 
