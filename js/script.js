@@ -86,6 +86,8 @@ let punti = 0;
 for (let i = 0; i < punteggio.length; i++) {
     punti += punteggio[i];
 }
+
+
 let punto = 1;
 // const containerGrid = document.querySelector(".container-grid");
 // console.log(containerGrid);
