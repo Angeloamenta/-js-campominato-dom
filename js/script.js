@@ -81,7 +81,12 @@ console.log(number100);
 // const button = document.querySelector(".button-play");
 let numbers = [];
 let whiteList = [];
-
+let punteggio =[];
+let punti = 0;
+for (let i = 0; i < punteggio.length; i++) {
+    punti += punteggio[i];
+}
+let punto = 1;
 // const containerGrid = document.querySelector(".container-grid");
 // console.log(containerGrid);
 
@@ -122,9 +127,12 @@ buttons.addEventListener("click", function() {
                     if (numbers[x] == i) {
                         square100.classList.add("lose")
                     alert("hai perso");
-                    containerGrid.innerHTML = `<div class="title-grid"><h1>Hai perso! Premi play e riprova</h1> </div>`;
+                    containerGrid.innerHTML = `<div class="title-grid"><h1>Hai perso! Premi play e riprova</h1> 
+                    il tuo punteggio è di ${punti}</div>`;
                     } else {
                         square100.classList.add("color")
+                        punteggio.push(parseInt(punto));
+                        console.log(punti);
                     }
                 }
                 
