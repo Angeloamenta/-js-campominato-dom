@@ -135,6 +135,12 @@ buttons.addEventListener("click", function() {
                 
                 punti += 1;
                 console.log(punti);
+
+                if (punti == 84) {
+                    alert("hai vinto")
+                    containerGrid.innerHTML = `<div class="title-grid"><h1>Hai vinto</h1> 
+                    il tuo punteggio è di ${punti}</div>`;
+                }
             })
         } 
         
@@ -147,7 +153,7 @@ buttons.addEventListener("click", function() {
             square81.append(i);
             whiteList.push(i);
                    while (numbers.length < 16) {
-                    const number = Math.floor(Math.random() * number100) + 1; 
+                    const number = Math.floor(Math.random() * number81) + 1; 
                     console.log('numero generato', number);
                     if (numbers.includes(number) == false) { 
                       numbers.push(number);
@@ -167,6 +173,13 @@ buttons.addEventListener("click", function() {
                 }
                 punti += 1;
                 console.log(punti);
+
+                if (punti == 65) {
+                    alert("hai vinto")
+                    containerGrid.innerHTML = `<div class="title-grid"><h1>Hai vinto</h1> 
+                    il tuo punteggio è di ${punti}</div>`;
+                }
+
             })
         } 
     } else  {
@@ -178,7 +191,7 @@ buttons.addEventListener("click", function() {
             square49.append(i);
             whiteList.push(i);
                    while (numbers.length < 16) {
-                    const number = Math.floor(Math.random() * number100) + 1; 
+                    const number = Math.floor(Math.random() * number49) + 1; 
                     console.log('numero generato', number);
                     if (numbers.includes(number) == false) { 
                       numbers.push(number);
@@ -198,6 +211,12 @@ buttons.addEventListener("click", function() {
                 }
                 punti += 1;
                 console.log(punti);
+                 
+                if (punti == 33) {
+                    alert("hai vinto")
+                    containerGrid.innerHTML = `<div class="title-grid"><h1>Hai vinto</h1> 
+                    il tuo punteggio è di ${punti}</div>`;
+                }
             })
         }
     }
